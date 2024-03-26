@@ -1,0 +1,11 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "../NavBar/Navbar";
+
+export default function Home() {
+  return (
+    <div className="max-w-7xl mx-auto my-2">
+      <Navbar />
+      <Outlet />
+    </div>
+  );
+}

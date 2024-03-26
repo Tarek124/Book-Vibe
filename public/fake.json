@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/339px-The_Great_Gatsby_Cover_1925_Retouched.jpg",
+    "review": "A timeless classic that explores the decadence of the Jazz Age through the eyes of the enigmatic Jay Gatsby.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Classic Fiction",
+    "tags": ["Romance", "Tragedy", "American Literature"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/To_Kill_A_Mockingbird.jpg",
+    "review": "A profound narrative on racial injustice and moral growth in the Southern United States during the 1930s.",
+    "totalPages": 281,
+    "rating": 4.8,
+    "category": "Literary Fiction",
+    "tags": ["Coming-of-Age", "Social Issues", "Legal Drama"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 3,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://m.media-amazon.com/images/M/MV5BMWFkNzIzNDUtNWI1Mi00ODA2LTgyMTMtYTZiYWMxMDFlNmNhL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+    "review": "A dystopian masterpiece that warns of the dangers of totalitarianism and surveillance.",
+    "totalPages": 328,
+    "rating": 4.7,
+    "category": "Dystopian Fiction",
+    "tags": ["Political Satire", "Totalitarianism", "Surveillance"],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Catcher-in-the-rye-red-cover.jpg/365px-Catcher-in-the-rye-red-cover.jpg",
+    "review": "An iconic portrayal of adolescent angst and alienation that continues to resonate with readers of all ages.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Coming-of-Age Fiction",
+    "tags": ["Teenage Rebellion", "Identity", "Loneliness"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 5,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/aa/Pride_and_prejudice.jpg",
+    "review": "A delightful romantic comedy of manners that explores the complexities of love, class, and marriage in 19th-century England.",
+    "totalPages": 279,
+    "rating": 4.6,
+    "category": "Romantic Fiction",
+    "tags": ["Regency Era", "Social Commentary", "Satire"],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings%2C_TFOTR_%282001%29.jpg",
+    "review": "An epic fantasy saga set in the enchanting world of Middle-earth, filled with rich characters, breathtaking landscapes, and a timeless battle between good and evil.",
+    "totalPages": 1178,
+    "rating": 4.9,
+    "category": "Fantasy Fiction",
+    "tags": ["Epic", "Adventure", "High Fantasy"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1954
+  }
+]
