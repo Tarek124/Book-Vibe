@@ -13,12 +13,11 @@ export default function ListedBook() {
     setWish(wishList);
   }, []);
   const handleSort = (e) => {
-    const sorted = read?.sort((a, b) => a[e] - b[e]);
+    const sorted = [...read].sort((a, b) => b[e] - a[e]);
     setRead(sorted);
-    const wishSorted = wish?.sort((a, b) => a[e] - b[e]);
+    const wishSorted = [...wish].sort((a, b) => b[e] - a[e]);
     setWish(wishSorted);
-    console.log(read, wish)
-  }; 
+  };
 
   return (
     <div>
@@ -96,7 +95,10 @@ export default function ListedBook() {
                     <div className="px-4 py-2 text-[#FFAC33] bg-[#FFF0EF] rounded-full">
                       Rating: {book.rating}
                     </div>
-                    <Link to={`/books/${book.bookId}`} className="cursor-pointer px-4 py-2 text-[#fefefe] green rounded-full">
+                    <Link
+                      to={`/books/${book.bookId}`}
+                      className="cursor-pointer px-4 py-2 text-[#fefefe] green rounded-full"
+                    >
                       View Details
                     </Link>
                   </div>
@@ -171,3 +173,10 @@ export default function ListedBook() {
     </div>
   );
 }
+
+// const handleSortByRating = () => {
+//   const sortedBooksByRating = [...displayBooks].sort(
+//     (firstBook, secondBook) => secondBook.rating - firstBook.rating
+//   );
+//   setDisplayBooks(sortedBooksByRating);
+// };
