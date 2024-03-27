@@ -74,12 +74,16 @@ export default function Card() {
     }
   };
   return (
-    <div className="flex justify-start gap-8 my-5">
-      <div className="flex justify-center items-center p-16 bg-[#4949490c] w-1/2 rounded">
-        <img className="rounded shadow-md w-[60%]" src={book.image} alt="" />
+    <div className="flex lg:flex-row flex-col justify-start gap-8 my-5">
+      <div className="flex justify-center items-center p-16 bg-[#4949490c] w-full lg:w-1/2 rounded">
+        <img
+          className="rounded shadow-md w-[80%] lg:w-[60%]"
+          src={book.image}
+          alt=""
+        />
       </div>
-      <div className="w-1/2">
-        <h2 className="text-4xl font-bold ">{book.bookName}</h2>
+      <div className="lg:w-1/2">
+        <h2 className="text-3xl sm:text-4xl font-bold ">{book.bookName}</h2>
         <p className="sans my-4 text-[#424242]">By : {book.author}</p>
         <div className="border-b w-full"></div>
         <p className="my-3 sans text-[#424242]">{book.category}</p>
@@ -87,7 +91,7 @@ export default function Card() {
         <p className="font-bold my-4">
           Review: <span className="font-normal">{book.review}</span>
         </p>
-        <div className="w-full items-center flex gap-4 my-4">
+        <div className="w-full items-center flex gap-1 sm:gap-4 my-4">
           <h2 className="font-bold">Tag</h2>
           {book.tags?.map((p, inx) => (
             <p
