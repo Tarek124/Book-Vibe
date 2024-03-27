@@ -146,6 +146,10 @@ export default function ListedBook() {
                         {p}
                       </p>
                     ))}
+                    <div className="flex justify-center items-center gap-1">
+                      <img src="./location.png" alt="" />
+                      Year of Publishing: {book.yearOfPublishing}
+                    </div>
                   </div>
                   <div className="flex items-center flex-wrap gap-4 mb-4">
                     <div className="flex items-center gap-1">
