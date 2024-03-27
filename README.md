@@ -2,7 +2,7 @@
 
 Welcome to Book Vibe, your ultimate destination for everything related to books and literature!
 
-**Live Site URL:** 
+**Live Site URL: https://assignment8tarek.netlify.app/** 
 
 ## Features and Characteristics
 
