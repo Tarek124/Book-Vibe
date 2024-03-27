@@ -23,7 +23,7 @@ export default function Homepage() {
       </div>
       <div className="playfair py-4">
         <h2 className="text-center text-4xl font-bold my-6">Books</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {myData.map((book) => (
             <NavLink to={`/books/${book.bookId}`} key={book.bookId}>
               <div className="flex justify-start my-4 border hover:shadow-lg ease-in duration-300 p-4 rounded flex-col min-h-[450px]">

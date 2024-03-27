@@ -1,15 +1,78 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Card() {
   const { id } = useParams();
   const myData = useLoaderData();
-  if (!myData || !Array.isArray(myData)) {
-    return <div>Loading...</div>; // or display an error message
-  }
 
+  const notify = () =>
+    toast.error("Book already added to list", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  const success = () =>
+    toast.success("Book added successfly", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   // Find the book based on the provided id
   const book = myData.find((book) => book.bookId === parseInt(id));
 
+  const handleRead = () => {
+    const datas = localStorage.getItem("readBook");
+    if (datas) {
+      const data = JSON.parse(datas);
+      if (data.find((item) => item.bookId === parseInt(id))) {
+        notify();
+      } else {
+        data.push(book);
+        localStorage.setItem("readBook", JSON.stringify(data));
+        success();
+      }
+    } else {
+      localStorage.setItem("readBook", JSON.stringify([book]));
+      success();
+    }
+  };
+  const handleWishlist = () => {
+    const datas = localStorage.getItem("wishlist");
+    const readBookData = localStorage.getItem("readBook");
+
+    const data = JSON.parse(readBookData);
+    const wishlistData = JSON.parse(datas);
+
+    if (data?.find((item) => item.bookId === parseInt(id))) {
+      notify();
+    } else {
+      if (datas) {
+        if (wishlistData.find((item) => item.bookId === parseInt(id))) {
+          notify("wishlist");
+        } else {
+          wishlistData.push(book);
+          localStorage.setItem("wishlist", JSON.stringify(wishlistData));
+          success();
+        }
+      } else {
+        localStorage.setItem("wishlist", JSON.stringify([book]));
+        success();
+      }
+    }
+  };
   return (
     <div className="flex justify-start gap-8 my-5">
       <div className="flex justify-center items-center p-16 bg-[#4949490c] w-1/2 rounded">
@@ -57,8 +120,27 @@ export default function Card() {
           </tbody>
         </table>
         <div>
-          <button className="btn mr-2">Read</button>
-          <button className="btn fresh text-white">Wishlist</button>
+          <button onClick={handleRead} className="btn mr-2">
+            Read
+          </button>
+          <button onClick={handleWishlist} className="btn fresh text-white">
+            Wishlist
+          </button>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}
+          />
+          {/* Same as */}
+          <ToastContainer />
         </div>
       </div>
     </div>
