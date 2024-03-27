@@ -11,6 +11,12 @@
 .playfair {
   font-family: "Playfair Display", serif;
 }
-.green{
-  background: #23BE0A;
+.green {
+  background: #23be0a;
+}
+.fresh {
+  background: #59c6d2;
+}
+.green-text {
+  color: #23be0a;
 }
