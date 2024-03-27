@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 
 const getPath = (x, y, width, height) => {
@@ -38,27 +39,53 @@ export default function PageToRead() {
   }, []);
 
   return (
-   <div className="flex justify-center items-center my-8">
-     <BarChart
-    width={1000}
-    height={500}
-    data={book}
-    margin={{
-      top: 20,
-      right: 30,
-      left: 20,
-      bottom: 5,
-    }}
-  >
-    <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="name" />
-    <YAxis />
-    <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-      {book.map((entry, index) => (
-        <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-      ))}
-    </Bar>
-  </BarChart>
-   </div>
+    <>
+      {book ? (
+        <div className="flex justify-center items-center my-8">
+          <BarChart
+            width={1000}
+            height={500}
+            data={book}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Bar
+              dataKey="uv"
+              fill="#8884d8"
+              shape={<TriangleBar />}
+              label={{ position: "top" }}
+            >
+              {book.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </div>
+      ) : (
+        <section>
+          <div className="">
+            <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center min-h-screen justify-center">
+              <h1 className="mb-4 text-4xl font-bold md:text-6xl">
+                Data not Availabe
+              </h1>
+
+              <NavLink
+                to="/"
+                className="inline-block items-center green rounded-full  px-8 py-4 text-center font-semibold text-white"
+              >
+                Back Home
+              </NavLink>
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 }
