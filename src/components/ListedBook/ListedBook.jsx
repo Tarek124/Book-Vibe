@@ -66,7 +66,7 @@ export default function ListedBook() {
                 <div className="playfair">
                   <h1 className="text-2xl font-bold">{book.bookName}</h1>
                   <p className="sans my-2 text-[#424242]">By : {book.author}</p>
-                  <div className="w-full items-center flex gap-2 my-2">
+                  <div className="w-full items-center flex flex-wrap gap-2 my-2">
                     <h2 className="font-bold">Tag</h2>
                     {book.tags?.map((p, inx) => (
                       <p
@@ -76,6 +76,10 @@ export default function ListedBook() {
                         {p}
                       </p>
                     ))}
+                    <div className="flex justify-center items-center gap-1">
+                      <img src="./location.png" alt="" />
+                      Year of Publishing: {book.yearOfPublishing}
+                    </div>
                   </div>
                   <div className="flex items-center flex-wrap gap-4 mb-4">
                     <div className="flex items-center gap-1">
