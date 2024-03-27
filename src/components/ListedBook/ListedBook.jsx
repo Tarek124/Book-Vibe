@@ -1,14 +1,19 @@
 import { useState } from "react";
 
 export default function ListedBook() {
-  const [tab, setTab] = useState("read");
   const readBook = JSON.parse(localStorage.getItem("readBook"));
   const wishList = JSON.parse(localStorage.getItem("wishlist"));
-  console.log(readBook, wishList);
-  const handleSort = () => {
-    readBook.sort();
-    console.log(readBook.totalPages);
+
+  const [tab, setTab] = useState("read");
+  const [read, setRead] = useState(readBook);
+  const [wish, setWish] = useState(wishList);
+  const handleSort = (e) => {
+    const sorted = readBook?.sort((a, b) => a[e] - b[e]);
+    const wishSorted = wishList?.sort((a, b) => a[e] - b[e]);
+    setRead(sorted);
+    setWish(wishSorted);
   };
+
   return (
     <div>
       <div className="bg-[#4949490c] text-4xl font-bold text-center py-6 my-6">
@@ -18,13 +23,13 @@ export default function ListedBook() {
         <details className="dropdown ">
           <summary className="m-1 btn green text-white">Sort By</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li onClick={handleSort}>
+            <li onClick={() => handleSort("totalPages")}>
               <a>Total Page</a>
             </li>
-            <li>
+            <li onClick={() => handleSort("rating")}>
               <a>Rating</a>
             </li>
-            <li>
+            <li onClick={() => handleSort("yearOfPublishing")}>
               <a>Publishing Year</a>
             </li>
           </ul>
@@ -44,8 +49,8 @@ export default function ListedBook() {
           role="tabpanel"
           className="tab-content bg-base-100 border-base-300 rounded-box p-4"
         >
-          {readBook &&
-            readBook.map((book, inx) => (
+          {read &&
+            read.map((book, inx) => (
               <div key={inx} className="p-4 my-4 border rounded-lg flex gap-4">
                 <div className="bg-[#4949490c] w-44 px-8 py-4 rounded-lg">
                   <img className="" src={book.image} alt="" />
@@ -102,10 +107,10 @@ export default function ListedBook() {
         />
         <div
           role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          className="tab-content bg-base-100 border-base-300 rounded-box p-4"
         >
-          {wishList &&
-            wishList.map((book, inx) => (
+          {wish &&
+            wish.map((book, inx) => (
               <div key={inx} className="p-4 my-4 border rounded-lg flex gap-4">
                 <div className="bg-[#4949490c] w-44 px-8 py-4 rounded-lg">
                   <img className="" src={book.image} alt="" />

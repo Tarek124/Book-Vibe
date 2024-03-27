@@ -7,6 +7,9 @@ import Error from "./components/Error/Error.jsx";
 import Homepage from "./components/HomePage/Homepage.jsx";
 import Card from "./components/Card/Card.jsx";
 import ListedBook from "./components/ListedBook/ListedBook.jsx";
+import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import Contact from "./components/Contact/Contact.jsx";
+import PageToRead from "./components/PageToRead/PageToRead.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,15 @@ const router = createBrowserRouter([
         path: "/listedbooks",
         element: <ListedBook />,
       },
+      {
+        path: "/about",
+        element: <AboutUs />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      { path: "/pagetoread", element: <PageToRead /> },
     ],
   },
 ]);

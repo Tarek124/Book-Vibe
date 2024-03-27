@@ -76,45 +76,5 @@
     "tags": ["Romance", "Satire"],
     "publisher": "T. Egerton, Whitehall",
     "yearOfPublishing": 1813
-  },
-
-  {
-    "bookId": 7,
-    "bookName": "1984",
-    "author": "George Orwell",
-    "image": "https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg",
-    "review": "A chilling portrayal of a dystopian society that feels scarily close to reality.",
-    "totalPages": 328,
-    "rating": 4.5,
-    "category": "Fiction",
-    "tags": ["Dystopian", "Political"],
-    "publisher": "Penguin Books",
-    "yearOfPublishing": 1949
-  },
-  {
-    "bookId": 8,
-    "bookName": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "image": "https://marketplace.canva.com/EAFPHUaBrFc/1/0/1003w/canva-black-and-white-modern-alone-story-book-cover-QHBKwQnsgzs.jpg",
-    "review": "A timeless classic that tackles themes of racism and morality with grace and insight.",
-    "totalPages": 281,
-    "rating": 4.8,
-    "category": "Fiction",
-    "tags": ["Coming-of-age", "Legal drama"],
-    "publisher": "J. B. Lippincott & Co.",
-    "yearOfPublishing": 1960
-  },
-  {
-    "bookId": 9,
-    "bookName": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "image": "https://www.adobe.com/express/create/cover/media_1042ff48ca7f6d77bde5524b0b57a191dd76ee0a0.jpeg?width=400&format=jpeg&optimize=medium",
-    "review": "A poignant exploration of the American Dream and its disillusionment in the Jazz Age.",
-    "totalPages": 180,
-    "rating": 4.3,
-    "category": "Fiction",
-    "tags": ["Romance", "Tragedy"],
-    "publisher": "Charles Scribner's Sons",
-    "yearOfPublishing": 1925
   }
 ]
