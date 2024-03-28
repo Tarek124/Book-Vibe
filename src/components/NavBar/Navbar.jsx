@@ -47,14 +47,14 @@ export default function Navbar() {
             {items}
           </ul>
         </div>
-        <a className=" font-bold text-2xl">Book Vibe</a>
+        <a className=" font-bold text-xl md:text-2xl">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-1">{items}</ul>
       </div>
       <div className="navbar-end gap-1">
         <a className="btn green  text-white">Sign in</a>
-        <a className="btn fresh  text-white">Sign up</a>
+        <a className="btn fresh  text-white xl:mr-0 mr-4">Sign up</a>
       </div>
     </div>
   );

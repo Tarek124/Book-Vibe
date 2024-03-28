@@ -4,16 +4,16 @@ export default function Homepage() {
   const myData = useLoaderData();
   return (
     <>
-      <div className="playfair w-full my-4 p-8 bg-[#4949490c] rounded  flex xl:flex-row flex-col justify-start xl:justify-center items-start xl:items-center gap-8">
-        <div className="w-full lg:w-1/2">
-          <h2 className="text-3xl lg:text-5xl font-bold">
+      <div className="playfair w-full my-4 p-3 sm:p-8 bg-[#4949490c] rounded  flex justify-center items-center gap-8">
+        <div className="w-full lg:w-1/2 ">
+          <h2 className="text-xl sm:text-3xl lg:text-5xl font-bold">
             Books to freshen up your bookshelf
           </h2>
           <NavLink to="/listedbooks" className="btn my-4 text-white green">
             View The List
           </NavLink>
         </div>
-        <div className="p-0 xl:px-4 w-full  xl:w-72 flex justify-start items-center">
+        <div className="p-0 xl:px-4 w-64 sm:w-72 flex justify-start items-center">
           <img
             className="rounded shadow-md"
             src="https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
@@ -21,6 +21,9 @@ export default function Homepage() {
           />
         </div>
       </div>
+
+
+
       <div className="playfair py-4">
         <h2 className="text-center text-4xl font-bold my-6">Books</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

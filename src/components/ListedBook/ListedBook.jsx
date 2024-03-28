@@ -136,7 +136,7 @@ export default function ListedBook() {
                 <div className="playfair">
                   <h1 className="text-2xl font-bold">{book.bookName}</h1>
                   <p className="sans my-2 text-[#424242]">By : {book.author}</p>
-                  <div className="w-full items-center flex gap-2 my-2">
+                  <div className="w-full items-center flex flex-wrap gap-2 my-2">
                     <h2 className="font-bold">Tag</h2>
                     {book.tags?.map((p, inx) => (
                       <p
@@ -169,9 +169,12 @@ export default function ListedBook() {
                     <div className="px-4 py-2 text-[#FFAC33] bg-[#FFF0EF] rounded-full">
                       Rating: {book.rating}
                     </div>
-                    <div className="cursor-pointer px-4 py-2 text-[#fefefe] green rounded-full">
+                    <Link
+                      to={`/books/${book.bookId}`}
+                      className="cursor-pointer px-4 py-2 text-[#fefefe] green rounded-full"
+                    >
                       View Details
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
